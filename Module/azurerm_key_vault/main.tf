@@ -32,6 +32,6 @@ resource "azurerm_key_vault" "kv" {
 resource "azurerm_key_vault_secret" "vm_secret" {
   for_each     = var.key_vault
   name         = each.value.secret_name
-  value        = each.value.secret_value
+  value        = lookup(each.value, "secret_value", "Arjun!@#123")
   key_vault_id = azurerm_key_vault.kv[each.key].id
 }

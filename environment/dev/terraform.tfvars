@@ -125,6 +125,7 @@ key_vault = {
     location            = "Central India"
     resource_group_name = "VNET-RG"
     secret_name         = "vm-admin-password"
+    secret_value        = "Arjun!@#123"
   }
 }
 
